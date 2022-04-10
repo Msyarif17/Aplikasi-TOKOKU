@@ -7,16 +7,17 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
-     *
+     * Run the migration
      * @return void
      */
     public function up()
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->id();
+            $table->integer('kode');
             $table->string('nama');
-            $table->
+            $table->integer('harga_beli');
+            $table->integer('harga_jual');
             $table->timestamps();
         });
     }
